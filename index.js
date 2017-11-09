@@ -9,7 +9,8 @@ base64Img.base64('image/demo1.jpg', function(err, data) {
 
 function WriteImage(data) {
     // save the image asynchronously.
-    ba64.writeImage("out/demo", data, function(err) {
+    var imgName = "Demo" + "_" + Date.now();
+    ba64.writeImage("out/" + imgName, data, function(err) {
         if (err) throw err;
         console.log("Image saved successfully");
         // do stuff
